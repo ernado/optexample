@@ -1,0 +1,37 @@
+openapi: 3.0.3
+info:
+  title: Example
+  description: Example
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /example:
+    get:
+      responses:
+        200:
+          description: OK
+          content:
+            "application/json":
+              schema:
+                $ref: '#/components/schemas/Example'
+components:
+  schemas:
+    Example:
+      type: object
+      required:
+        - Required
+        - NullableRequired
+      properties:
+        Optional:
+          type: string
+        NullableOptional:
+          type: string
+          nullable: true
+        Required:
+          type: string
+          example: "example"
+        NullableRequired:
+          type: string
+          nullable: true
+  

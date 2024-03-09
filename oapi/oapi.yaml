@@ -1,0 +1,6 @@
+package: oapi
+generate:
+  models: true
+output: oapi.gen.go
+output-options:
+  nullable-type: true
